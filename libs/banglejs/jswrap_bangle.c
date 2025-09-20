@@ -1099,7 +1099,7 @@ void jswrap_banglejs_pwrBacklight(bool on) {
   jshPinOutput(LCD_BL, on);
 #endif
 #ifdef LCD_CONTROLLER_LPM013M126
-  lcdMemLCD_extcominBacklight(on);
+  lcdMemLCD_extcominBacklight(false);
 #endif
 }
 
@@ -3802,7 +3802,7 @@ NO_INLINE void jswrap_banglejs_hwinit() {
   jswrap_banglejs_ioWr(IOEXP_LCD_RESET,0); // LCD reset on
   jshDelayMicroseconds(100000);
   jswrap_banglejs_ioWr(IOEXP_LCD_RESET,1); // LCD reset off
-  jswrap_banglejs_pwrBacklight(true); // backlight on
+  jswrap_banglejs_pwrBacklight(false); // backlight on
   jshDelayMicroseconds(10000);
 #endif
 #endif //EMULATED
@@ -3826,7 +3826,7 @@ NO_INLINE void jswrap_banglejs_hwinit() {
   graphicsInternal.data.fontSize = JSGRAPHICS_FONTSIZE_6X8+1; // 4x6 size is default
 #ifdef LCD_CONTROLLER_LPM013M126
   lcdMemLCD_init(&graphicsInternal);
-  jswrap_banglejs_pwrBacklight(true);
+  jswrap_banglejs_pwrBacklight(false);
 #endif
 #ifdef LCD_CONTROLLER_ST7789_8BIT
   lcdST7789_init(&graphicsInternal);
