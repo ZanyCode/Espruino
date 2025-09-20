@@ -700,7 +700,7 @@ JshI2CInfo i2cInternal;
 #define DEFAULT_BACKLIGHT_TIMEOUT DEFAULT_LCD_POWER_TIMEOUT
 #endif
 #ifndef DEFAULT_LOCK_TIMEOUT
-#define DEFAULT_LOCK_TIMEOUT 30000 // in msec - default for lockTimeout
+#define DEFAULT_LOCK_TIMEOUT 4000 // in msec - default for lockTimeout
 #endif
 #ifndef DEFAULT_TWIST_THRESHOLD
 #define DEFAULT_TWIST_THRESHOLD 800
