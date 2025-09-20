@@ -358,7 +358,7 @@ int main(void)
 #ifdef BANGLEJS_Q3
     lcd_init();
     lcd_println("\n  HOLD BUTTON 2 SEC\r\n  TO TURN ON");
-    jswrap_banglejs_periph_off();
+    jswrap_banglejs_off();
     nrf_delay_ms(2000000);
 #endif
 
