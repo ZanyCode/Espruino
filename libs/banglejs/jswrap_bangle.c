@@ -3647,6 +3647,8 @@ JsVar *jswrap_banglejs_getHealthStatus(JsVar *range) {
 /* After init is called (a second time, NOT first time), we execute any JS that is due to be executed,
  * then we call this afterwards to shut down anything that isn't required (compass/hrm/etc). */
 void jswrap_banglejs_postInit() {
+  jshSleep(20000);
+
 #ifdef GPS_PIN_RX
   //jsiConsolePrintf("GPS %d %d\n",bangleFlags & JSBF_GPS_ON, getDeviceRequested("GPS"));
   if ((bangleFlags & JSBF_GPS_ON) && !getDeviceRequested("GPS")) {
