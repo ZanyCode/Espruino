@@ -23,6 +23,7 @@
 #include "platform_config.h"
 #include "jsutils.h"
 #include "hardware.h"
+#include "banglejs/jswrap_bangle.h"
 #include "nrf_gpio.h"
 #include "nrf_delay.h"
 #include "nrf_mbr.h"
@@ -358,6 +359,7 @@ int main(void)
     lcd_init();
     lcd_println("\n  HOLD BUTTON 2 SEC\r\n  TO TURN ON");
     jswrap_banglejs_periph_off();
+    nrf_delay_ms(2000000);
 #endif
 
     // Did we just power on? If not (we watchdog/softreset) RESETREAS will be nonzero
