@@ -687,7 +687,7 @@ JshI2CInfo i2cInternal;
 #define DEFAULT_ACCEL_POLL_INTERVAL 80 // in msec - 12.5 hz to match accelerometer
 #define POWER_SAVE_ACCEL_POLL_INTERVAL 800 // in msec
 #define POWER_SAVE_MIN_ACCEL 1638 // min acceleration before we exit power save... (8192*0.2)
-#define POWER_SAVE_TIMEOUT 60000 // 60 seconds of inactivity
+#define POWER_SAVE_TIMEOUT 5 // 60 seconds of inactivity
 #define ACCEL_POLL_INTERVAL_MAX 4000 // in msec - DEFAULT_ACCEL_POLL_INTERVAL_MAX+TIMER_MAX must be <65535
 #ifndef DEFAULT_BTN_LOAD_TIMEOUT
 #define DEFAULT_BTN_LOAD_TIMEOUT 1500 // in msec - how long does the button have to be pressed for before we restart
