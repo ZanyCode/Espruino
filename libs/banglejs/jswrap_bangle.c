@@ -5676,7 +5676,6 @@ Turn Bangle.js (mostly) off, but keep the CPU in sleep mode until BTN1 is
 pressed to preserve the RTC (current time).
 */
 void jswrap_banglejs_softOff() {
-  return;
 #ifndef EMULATED
   // If BTN1 is pressed wait until it is released
   while (jshPinGetValue(BTN1_PININDEX));
