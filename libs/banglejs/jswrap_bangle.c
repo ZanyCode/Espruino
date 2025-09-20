@@ -5654,11 +5654,11 @@ Turn Bangle.js off. It can only be woken by pressing BTN1.
 void jswrap_banglejs_off() {
 #ifndef EMULATED
   // If BTN1 is pressed wait until it is released
-  // while (_jswrap_banglejs_shouldWake());
+  while (_jswrap_banglejs_shouldWake());
   // turn peripherals off
   jswrap_banglejs_periph_off();
   // system off
-  // sd_power_system_off();
+  sd_power_system_off();
   while(1);
 #else
   jsExceptionHere(JSET_ERROR, ".off not implemented on emulator");
@@ -5676,6 +5676,7 @@ Turn Bangle.js (mostly) off, but keep the CPU in sleep mode until BTN1 is
 pressed to preserve the RTC (current time).
 */
 void jswrap_banglejs_softOff() {
+  return;
 #ifndef EMULATED
   // If BTN1 is pressed wait until it is released
   while (jshPinGetValue(BTN1_PININDEX));
