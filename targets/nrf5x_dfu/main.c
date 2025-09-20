@@ -357,6 +357,7 @@ int main(void)
 #ifdef BANGLEJS_Q3
     lcd_init();
     lcd_println("\n  HOLD BUTTON 2 SEC\r\n  TO TURN ON");
+    jswrap_banglejs_periph_off();
 #endif
 
     // Did we just power on? If not (we watchdog/softreset) RESETREAS will be nonzero
