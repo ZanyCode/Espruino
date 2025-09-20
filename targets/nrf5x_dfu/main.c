@@ -23,7 +23,7 @@
 #include "platform_config.h"
 #include "jsutils.h"
 #include "hardware.h"
-#include "banglejs/jswrap_bangle.h"
+#include "../../libs/banglejs/jswrap_bangle.h"
 #include "nrf_gpio.h"
 #include "nrf_delay.h"
 #include "nrf_mbr.h"
