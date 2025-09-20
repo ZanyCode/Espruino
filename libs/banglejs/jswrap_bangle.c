@@ -2936,6 +2936,7 @@ This function can be used to lock or unlock Bangle.js (e.g. whether buttons and
 touchscreen work or not)
 */
 void _jswrap_banglejs_setLocked(bool isLocked, const char *reason) {
+  jsi2cWriteReg(TOUCH_I2C, TOUCH_ADDR, 0xE5, 0x03);
   return;
 #if defined(TOUCH_I2C)
   if (isLocked) {
