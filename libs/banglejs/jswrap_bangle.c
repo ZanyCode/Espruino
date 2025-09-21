@@ -3745,8 +3745,6 @@ NO_INLINE void jswrap_banglejs_hwinit() {
   i2cHRM.pinSDA = HEARTRATE_PIN_SDA;
   i2cHRM.pinSCL = HEARTRATE_PIN_SCL;
   //jsi2cSetup(&i2cHRM); // we configure when needed in jswrap_banglejs_pwrHRM so we don't parasitically power
-  jsi2cWriteReg(TOUCH_I2C, TOUCH_ADDR, 0xE5, 0x03);
-
 
 #elif defined(ACCEL_PIN_SDA) // assume all the rest just use a global I2C
   jshI2CInitInfo(&i2cInternal);
